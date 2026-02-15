@@ -66,41 +66,49 @@ export default function ProjectCard({
 
       {/* Botones */}
       <div className="flex gap-4">
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex items-center gap-2
-            text-sm px-4 py-2
-            bg-zinc-800 border border-zinc-700
-            rounded-lg
-            hover:border-cyan-400
-            hover:bg-zinc-700
-            transition
-          "
-        >
-          <FaGithub />
-          Código
-        </a>
 
-        <a
-          href={demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex items-center gap-2
-            text-sm px-4 py-2
-            bg-cyan-500 text-black font-medium
-            rounded-lg
-            hover:bg-cyan-400
-            transition
-          "
-        >
-          <FaExternalLinkAlt />
-          Demo
-        </a>
-      </div>
+  {/* Código - siempre visible si hay github */}
+  {github && (
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        flex items-center gap-2
+        text-sm px-4 py-2
+        bg-zinc-800 border border-zinc-700
+        rounded-lg
+        hover:border-cyan-400
+        hover:bg-zinc-700
+        transition
+      "
+    >
+      <FaGithub />
+      Código
+    </a>
+  )}
+
+  {/* Demo - SOLO si existe */}
+  {demo && (
+    <a
+      href={demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        flex items-center gap-2
+        text-sm px-4 py-2
+        bg-cyan-500 text-black font-medium
+        rounded-lg
+        hover:bg-cyan-400
+        transition
+      "
+    >
+      <FaExternalLinkAlt />
+      Demo
+    </a>
+  )}
+
+</div>
     </div>
   )
 }

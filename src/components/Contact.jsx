@@ -33,7 +33,7 @@ export default function Contact() {
 
         <p className="text-center text-zinc-400 max-w-2xl mx-auto mb-12">
           Estoy activo en mis redes, por si quieres pasarte.
-          Si te apetece hablar de desarrollo o montar algo chulo, aquí estoy.
+          Si te apetece hablar de desarrollo o para cualquier otro motivo, aquí me puedes encontrar.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
